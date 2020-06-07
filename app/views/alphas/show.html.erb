@@ -1,0 +1,9 @@
+<h1>Showing selected alpha</h1>
+<p>
+  Title: <%= @alpha.title %>
+</p>
+<p>
+  Desription: <%= @alpha.description %>
+</p>
+<%= link_to "Edit alpha" , edit_alpha_path(@alpha) %> |
+<%= link_to "Back to alpha listing" , alphas_path %>

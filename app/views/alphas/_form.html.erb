@@ -1,0 +1,22 @@
+<h3>Following errors prevent alpha getting created</h3>
+<% if @alpha.errors.any? %>
+  <ul>
+    <% @alpha.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @alpha do |d| %>
+  <p>
+    <%= d.label :title %><br/>
+    <%= d.text_field :title %>
+  </p>
+  <p>
+    <%= d.label :description %><br/>
+    <%= d.text_field :description %>
+  </p>
+  <p>
+    <%= d.submit %>
+  </p>
+<% end %>
+<%= link_to "Back to alpha listing" , alphas_path %>
