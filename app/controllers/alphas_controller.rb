@@ -24,7 +24,10 @@ class AlphasController < ApplicationController
   # POST /alphas
   # POST /alphas.json
   def create
+    # debugger prevent execution and debug
+    # debugger
     @alpha = Alpha.new(alpha_params)
+    @alpha.user = User.first
     if @alpha.save
       flash[:notice] = "article was successfully created"
       redirect_to alpha_path(@alpha)
